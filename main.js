@@ -73,7 +73,7 @@ function initInterface() {
         include('https://clediego.github.io/prot/main.css', 'link', 'head');
 
         //carregar a nova interface
-        $('html').load('https://clediego.github.io/prot/main.html', function () {
+        $('body').load('https://clediego.github.io/prot/main.html', function () {
 
         });
 
