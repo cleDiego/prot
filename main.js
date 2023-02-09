@@ -30,13 +30,8 @@ function initInterface() {
         }
     }
 
-
-
-    //remover a tag de refresh da página
     $(document).ready(function () {
-        window.stop();
-        $('meta[http-equiv=refresh]').remove();
-
+        //listar os protocolos
         var protList = [];
         $('table > tbody  > tr').each(function(i, tr) {
             if ($(tr).find('td input[name="prot[]"]').length) {
@@ -54,8 +49,11 @@ function initInterface() {
             }
         });
 
+        //limpar o front
         $('head').empty();
         $('body').empty();
+        //pausar o refresh
+        window.stop();
 
         include(null, 'meta', 'head', null, 'viewport', null, 'width=device-width, initial-scale=1');
         include('https://code.jquery.com/jquery-3.6.3.min.js', 'script', 'head');
@@ -63,6 +61,9 @@ function initInterface() {
         include('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css', 'link', 'head');
         include('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js', 'script', 'body');
         include('https://clediego.github.io/prot/main.css', 'link', 'head');
+
+        //carregar a nova interface
+        $('body').load('https://clediego.github.io/prot/main.html');
 
     });
 }
