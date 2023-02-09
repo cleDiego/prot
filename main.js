@@ -34,6 +34,27 @@ function initInterface() {
 
     //remover a tag de refresh da página
     $(document).ready(function () {
+        window.stop();
         $('meta[http-equiv=refresh]').remove();
-    })
+
+        var protList = [];
+        $('table > tbody  > tr').each(function(i, tr) {
+            if ($(tr).find('td input[name="prot[]"]').length) {
+
+                protList[i] = {
+                    'numero': $(tr).find('td').eq(2).find('a').text().replace(/[^0-9]/g, ''),
+                    'cliente': $(tr).find('td').eq(3).text().trim(),
+                    'prioridade': $(tr).find('td').eq(4).text().trim(),
+                    'tipo': $(tr).find('td').eq(5).text().trim(),
+                    'motivo': $(tr).find('td').eq(6).text().trim(),
+                    'solicitacao': $(tr).find('td').eq(7).text().trim(),
+                    'data_entrega': $(tr).find('td').eq(8).text().trim(),
+                    'localizacao_atual': $(tr).find('td').eq(9).text().trim()
+                }
+            }
+        });
+
+
+
+    });
 }
