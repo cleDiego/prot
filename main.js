@@ -3,6 +3,7 @@ function initInterface() {
         var elem;
         elem = document.createElement(type);
         for ([k, v] of Object.entries(attr)) elem.setAttribute(k, v);
+        elem.innerHTML = html;
         document.getElementsByTagName(appendIn).item(0).appendChild(elem);
     }
 
@@ -33,7 +34,7 @@ function initInterface() {
 
         include('meta', 'head', null, { name: 'viewport', content: 'width=device-width, initial-scale=1' });
         include('meta', 'head', null, { charset: 'utf-8' });
-        include('title', 'head', 'Caixa de Trabalho', { charset: 'utf-8' });
+        include('title', 'head', 'Caixa de Trabalho');
 
         include('script', 'body', null, { src: 'https://code.jquery.com/jquery-3.6.3.min.js' });
         include('script', 'body', null, { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js' });
