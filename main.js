@@ -1,9 +1,14 @@
 function initInterface() {
-    function include(file = null, type = 'script', appendIn = 'head', id = null, name = null, value = null, content = null) {
+    function include(file = null, type = 'script', appendIn = 'head', id = null, name = null, value = null, content = null, html = null) {
         var elem;
         switch (type) {
             case 'head' || 'body':
                 elem = document.createElement(type);
+                document.getElementsByTagName(appendIn).item(0).appendChild(elem);
+                break;
+            case 'title':
+                elem = document.createElement(type);
+                elem.innerHTML = html;
                 document.getElementsByTagName(appendIn).item(0).appendChild(elem);
                 break;
             case 'script':
@@ -50,17 +55,18 @@ function initInterface() {
         });
 
         //limpar o front
-        /*$('head').empty();
+        $('head').empty();
         $('body').empty();
         //pausar o refresh
         window.stop();
 
         include(null, 'meta', 'head', null, 'viewport', null, 'width=device-width, initial-scale=1');
+        include(null, 'title', 'head', null, null, null, null, 'Caixa de Trabalho');
         include('https://code.jquery.com/jquery-3.6.3.min.js', 'script', 'head');
         include('https://code.jquery.com/ui/1.13.2/jquery-ui.min.js', 'script', 'head');
         include('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css', 'link', 'head');
         include('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js', 'script', 'body');
-        include('https://clediego.github.io/prot/main.css', 'link', 'head');*/
+        include('https://clediego.github.io/prot/main.css', 'link', 'head');
 
         //carregar a nova interface
         $('html').load('https://clediego.github.io/prot/main.html');
