@@ -70,10 +70,10 @@ function initInterface() {
         include('https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css', 'link', 'head');
         include('https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js', 'script', 'body');
 
-        include('https://clediego.github.io/prot/main.css', 'link', 'head');
+        include('https://clediego.github.io/prot/main.css?v='+Date.now(), 'link', 'head');
 
         //carregar a nova interface
-        $('body').load('https://clediego.github.io/prot/main.html', function () {
+        $('body').load('https://clediego.github.io/prot/main.html?v='+Date.now(), function () {
 
         });
 
