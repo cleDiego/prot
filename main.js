@@ -31,6 +31,7 @@ function initInterface() {
     include('https://code.jquery.com/ui/1.13.2/jquery-ui.min.js', 'script', 'head');
     include('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css', 'link', 'head');
     include('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js', 'script', 'body');
+    include('https://clediego.github.io/prot/main.css', 'link', 'head');
 
     //remover a tag de refresh da página
     $(document).ready(function () {
@@ -54,7 +55,7 @@ function initInterface() {
             }
         });
 
-
+        $('.geral').hide();
 
     });
 }
