@@ -50,7 +50,7 @@ function initInterface() {
             include('script', 'body', null, { src: 'https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js' });
             include('script', 'body', null, { src: 'https://code.jquery.com/ui/1.13.2/jquery-ui.min.js' });
 
-            $('.prot-list').DataTables({
+            $('.prot-list').DataTable({
                 paging: false,
                 info: false,
                 columns: [
@@ -64,7 +64,7 @@ function initInterface() {
                     { orderable: false },
                     { orderable: false },
                     { orderable: false },
-                    { orderable: false },
+                    { orderable: false }
                 ]
 
             });
