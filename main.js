@@ -26,3 +26,7 @@ function include(file = null, type = 'script', appendIn = 'head', id = null, nam
 }
 
 include(null, 'meta', 'head', null, 'viewport', null, 'width=device-width, initial-scale=1');
+include('https://code.jquery.com/jquery-3.6.3.min.js', 'script', 'head');
+include('https://code.jquery.com/ui/1.13.2/jquery-ui.min.js', 'script', 'head');
+include('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css', 'link', 'head');
+include('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js', 'script', 'body');
