@@ -54,10 +54,8 @@ function initInterface() {
             }
         });
 
-        $('html').empty();
-
-        include(null, 'head', 'html');
-        include(null, 'body', 'html');
+        $('head').empty();
+        $('body').empty();
 
         include(null, 'meta', 'head', null, 'viewport', null, 'width=device-width, initial-scale=1');
         include('https://code.jquery.com/jquery-3.6.3.min.js', 'script', 'head');
