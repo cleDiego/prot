@@ -61,6 +61,7 @@ function initInterface() {
         window.stop();
 
         include(null, 'meta', 'head', null, 'viewport', null, 'width=device-width, initial-scale=1');
+        include(null, 'meta', 'head', null, null, null, 'text/html; charset=utf-8');
         include(null, 'title', 'head', null, null, null, null, 'Caixa de Trabalho');
         include('https://code.jquery.com/jquery-3.6.3.min.js', 'script', 'head');
         include('https://code.jquery.com/ui/1.13.2/jquery-ui.min.js', 'script', 'head');
