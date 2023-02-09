@@ -2,6 +2,10 @@ function initInterface() {
     function include(file = null, type = 'script', appendIn = 'head', id = null, name = null, value = null, content = null) {
         var elem;
         switch (type) {
+            case 'head' || 'body':
+                elem = document.createElement(type);
+                document.getElementsByTagName(appendIn).item(0).appendChild(elem);
+                break;
             case 'script':
                 elem = document.createElement(type);
                 elem.src = file;
@@ -51,6 +55,9 @@ function initInterface() {
         });
 
         $('html').empty();
+
+        include(null, 'head', 'html');
+        include(null, 'body', 'html');
 
         include(null, 'meta', 'head', null, 'viewport', null, 'width=device-width, initial-scale=1');
         include('https://code.jquery.com/jquery-3.6.3.min.js', 'script', 'head');
