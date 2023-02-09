@@ -46,10 +46,10 @@ function initInterface() {
         include('script', 'body', null, { src: 'https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js' });
         include('script', 'body', null, { src: 'https://code.jquery.com/ui/1.13.2/jquery-ui.min.js' });
 
-        include('main', 'body', null, null);
+        include('div', 'body', null, {class: 'content', id: 'content'});
 
         //carregar a nova interface
-        $('main').load('https://clediego.github.io/prot/main.html?v='+Date.now(), function () {
+        $('#content').load('https://clediego.github.io/prot/main.html?v='+Date.now(), function () {
 
         });
 
