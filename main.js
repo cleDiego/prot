@@ -41,17 +41,18 @@ function initInterface() {
         include('link', 'head', null, { href: 'https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css', rel: 'stylesheet' });
         include('link', 'head', null, { href: 'https://clediego.github.io/prot/main.css?v=' + Date.now(), rel: 'stylesheet' });
 
-        include('script', 'body', null, { src: 'https://code.jquery.com/jquery-3.6.3.min.js' });
-        include('script', 'body', null, { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js' });
-        include('script', 'body', null, { src: 'https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js' });
-        include('script', 'body', null, { src: 'https://code.jquery.com/ui/1.13.2/jquery-ui.min.js' });
 
-        include('div', 'body', null, {class: 'content', id: 'content'});
 
         //carregar a nova interface
-        $('#content').load('https://clediego.github.io/prot/main.html?v='+Date.now(), function () {
+        $('body').load('https://clediego.github.io/prot/main.html?v='+Date.now(), function () {
+            include('script', 'body', null, { src: 'https://code.jquery.com/jquery-3.6.3.min.js' });
+            include('script', 'body', null, { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js' });
+            include('script', 'body', null, { src: 'https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js' });
+            include('script', 'body', null, { src: 'https://code.jquery.com/ui/1.13.2/jquery-ui.min.js' });
 
         });
+
+
 
     });
 }
