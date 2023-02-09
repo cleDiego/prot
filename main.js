@@ -45,29 +45,23 @@ function initInterface() {
 
         //carregar a nova interface
         $('body').load('https://clediego.github.io/prot/main.html?v='+Date.now(), function () {
-            include('script', 'body', null, { src: 'https://code.jquery.com/jquery-3.6.3.min.js' });
-            include('script', 'body', null, { src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js' });
-            include('script', 'body', null, { src: 'https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js' });
-            include('script', 'body', null, { src: 'https://code.jquery.com/ui/1.13.2/jquery-ui.min.js' });
-
-            $('.prot-list').DataTable({
-                paging: false,
-                info: false,
-                columns: [
-                    { orderable: false },
-                    { orderable: false },
-                    { orderable: true },
-                    { orderable: false },
-                    { orderable: false },
-                    { orderable: false },
-                    { orderable: false },
-                    { orderable: false },
-                    { orderable: false },
-                    { orderable: false },
-                    { orderable: false }
-                ]
-
+            $.when(
+                $.getScript('https://code.jquery.com/jquery-3.6.3.min.js'),
+                $.getScript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'),
+                $.getScript('https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js'),
+                $.getScript('https://code.jquery.com/ui/1.13.2/jquery-ui.min.js'),
+                $.Deferred(function( deferred ){
+                    $( deferred.resolve );
+                })
+            ).done(function(){
+                $('.prot-list').DataTable({
+                    paging: false,
+                    info: false,
+                    search: false
+                });
             });
+
+
         });
 
 
