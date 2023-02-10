@@ -26,6 +26,8 @@ function initInterface() {
             }
         });
 
+
+
         //limpar o front
         $('head').empty();
         $('body').empty();
@@ -54,7 +56,7 @@ function initInterface() {
             })
         ).done(function () {
             $('body').load('https://clediego.github.io/prot/main.html?v=' + Date.now(), function () {
-
+                console.log(protList);
                 for (let i = 0; i < protList.length; i++) {
                     $('.prot-list-table tbody').appendChild(
                         '<tr>'+
