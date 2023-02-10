@@ -36,13 +36,13 @@ function initInterface() {
         include('meta', 'head', null, { charset: 'utf-8' });
         include('title', 'head', 'Caixa de Trabalho');
 
+        include('link', 'head', null, { href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css', rel: 'stylesheet' });
+        include('link', 'head', null, { href: 'https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css', rel: 'stylesheet' });
+        include('link', 'head', null, { href: 'https://clediego.github.io/prot/main.css?v=' + Date.now(), rel: 'stylesheet' });
+
         //carregar a nova interface
 
         $.when(
-            $.getScript('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap'),
-            $.getScript('https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css'),
-            $.getScript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css'),
-            $.getScript('https://clediego.github.io/prot/main.css'),
             $.getScript('https://code.jquery.com/jquery-3.6.3.min.js'),
             $.getScript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'),
             $.getScript('https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js'),
