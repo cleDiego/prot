@@ -1,3 +1,6 @@
+//pausar o refresh
+window.stop();
+
 function initInterface() {
     function include(type = 'script', appendIn = 'head', html = null, attr = []) { //id = null, name = null, value = null, content = null) {
         var elem;
@@ -31,8 +34,8 @@ function initInterface() {
         //limpar o front
         $('head').empty();
         $('body').empty();
-        //pausar o refresh
-        window.stop();
+
+
 
         include('meta', 'head', null, { name: 'viewport', content: 'width=device-width, initial-scale=1' });
         include('meta', 'head', null, { charset: 'utf-8' });
