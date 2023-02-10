@@ -61,7 +61,7 @@ function initInterface() {
             $('body').load('https://clediego.github.io/prot/main.html?v=' + Date.now(), function () {
                 console.log(protList);
                 for (let i = 0; i < protList.length; i++) {
-                    $('.prot-list-table tbody').appendChild(
+                    $('.prot-list-table tbody').append(
                         '<tr>'+
                         '    <td><span class="list-prot-marker"></span></td>'+
                         '    <td></td>'+
