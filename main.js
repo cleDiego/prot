@@ -23,8 +23,9 @@ function initInterface() {
                     'tipo': $(tr).find('td').eq(5).text().trim(),
                     'motivo': $(tr).find('td').eq(6).text().trim(),
                     'solicitacao': $(tr).find('td').eq(7).text().trim(),
-                    'data_entrega': $(tr).find('td').eq(8).text().trim() ? $(tr).find('td').eq(8).text().trim() : 'a',
-                    'localizacao_atual': $(tr).find('td').eq(9).text().trim()
+                    'dt_entrada': $(tr).find('td').eq(10).text().trim(),
+                    'dt_entrega': $(tr).find('td').eq(8).text().trim() ? $(tr).find('td').eq(8).text().trim() : 'a',
+                    'localizacao': $(tr).find('td').eq(9).text().trim()
                 });
             }
         });
@@ -67,7 +68,7 @@ function initInterface() {
                         '    <td></td>'+
                         '    <td>'+protList[i].cliente+'</td>'+
                         '    <td>'+protList[i].numero+'</td>'+
-                        '    <td>'+protList[i].data_entrada+'</td>'+
+                        '    <td>'+protList[i].dt_entrada+'</td>'+
                         '    <td>'+protList[i].tipo+'</td>'+
                         '    <td>'+protList[i].motivo+'</td>'+
                         '    <td>'+protList[i].solicitacao+'</td>'+
