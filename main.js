@@ -13,8 +13,7 @@ function initInterface() {
     $(document).ready(function () {
         //listar os protocolos
         var protList = [];
-        var marker = null;
-        var marker_color = null;
+        var marker, marker_color, marker_bg_color = null
         $('table > tbody  > tr').each(function (i, tr) {
             if ($(tr).find('th[colspan="12"]').length) {
                 marker = $(tr).find('th').text();
