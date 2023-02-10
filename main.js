@@ -31,9 +31,9 @@ function initInterface() {
                     'dt_entrada': $(tr).find('td').eq(10).text().trim(),
                     'dt_entrega': $(tr).find('td').eq(8).text().trim(),
                     'localizacao': $(tr).find('td').eq(9).text().trim(),
-                    'marker': marker,
-                    'marker_color': marker_color,
-                    'marker_bg_color': marker_bg_color
+                    'marker': marker ? marker : '',
+                    'marker_color': marker_color ? marker_color : '',
+                    'marker_bg_color': marker_bg_color ? marker_bg_color : ''
                 });
             }
         });
