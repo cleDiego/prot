@@ -59,17 +59,17 @@ function initInterface() {
                     info: false,
                     search: false,
                     columns: [
+                        {orderable: true},
                         {orderable: false},
+                        {orderable: true},
+                        {orderable: true},
+                        {orderable: true},
+                        {orderable: true},
+                        {orderable: true},
                         {orderable: false},
-                        {orderable: false},
-                        {orderable: false},
-                        {orderable: false},
-                        {orderable: false},
-                        {orderable: false},
-                        {orderable: false},
-                        {orderable: false},
-                        {orderable: false},
-                        {orderable: false}
+                        {orderable: true},
+                        {orderable: true},
+                        {orderable: true}
                     ]
                 });
             });
