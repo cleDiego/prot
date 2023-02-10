@@ -52,7 +52,7 @@ function initInterface() {
             })
         ).done(function () {
             $('body').load('https://clediego.github.io/prot/main.html?v='+Date.now(), function () {
-                $('.prot-list').DataTable({
+                $('.prot-list-table').DataTable({
                     paging: false,
                     info: false,
                     search: false
