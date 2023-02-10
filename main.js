@@ -16,16 +16,16 @@ function initInterface() {
         $('table > tbody  > tr').each(function(i, tr) {
             if ($(tr).find('td input[name="prot[]"]').length) {
 
-                protList[i] = {
+                protList.push({
                     'numero': $(tr).find('td').eq(2).find('a').text().replace(/[^0-9]/g, ''),
-                    'cliente': $(tr).find('td').eq(3).text().trim() ?  $(tr).find('td').eq(3).text().trim() : 'a',
+                    'cliente': $(tr).find('td').eq(3).text().trim() ? $(tr).find('td').eq(3).text().trim() : 'a',
                     'prioridade': $(tr).find('td').eq(4).text().trim() ? $(tr).find('td').eq(4).text().trim() : 'a',
                     'tipo': $(tr).find('td').eq(5).text().trim(),
                     'motivo': $(tr).find('td').eq(6).text().trim(),
                     'solicitacao': $(tr).find('td').eq(7).text().trim(),
                     'data_entrega': $(tr).find('td').eq(8).text().trim() ? $(tr).find('td').eq(8).text().trim() : 'a',
                     'localizacao_atual': $(tr).find('td').eq(9).text().trim()
-                }
+                });
             }
         });
 
