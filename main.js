@@ -72,7 +72,7 @@ function initInterface() {
                         '    <td>'+protList[i].tipo+'</td>'+
                         '    <td>'+protList[i].motivo+'</td>'+
                         '    <td>'+protList[i].solicitacao+'</td>'+
-                        '    <td>'+protList[i].prioridade+'</tr>'+
+                        '    <td>'+protList[i].prioridade+'</td>'+
                         '    <td>'+protList[i].dt_entrega+'</td>'+
                         '    <td>'+protList[i].localizacao+'</td>'+
                         '</tr>'
