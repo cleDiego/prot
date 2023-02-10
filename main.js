@@ -39,14 +39,14 @@ function initInterface() {
         //carregar a nova interface
 
         $.when(
-            $.getScript('https://code.jquery.com/jquery-3.6.3.min.js'),
-            $.getScript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'),
-            $.getScript('https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js'),
-            $.getScript('https://code.jquery.com/ui/1.13.2/jquery-ui.min.js'),
             $.getScript('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap'),
             $.getScript('https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css'),
             $.getScript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css'),
             $.getScript('https://clediego.github.io/prot/main.css'),
+            $.getScript('https://code.jquery.com/jquery-3.6.3.min.js'),
+            $.getScript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'),
+            $.getScript('https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js'),
+            $.getScript('https://code.jquery.com/ui/1.13.2/jquery-ui.min.js'),
             $.Deferred(function( deferred ){
                 $( deferred.resolve );
             })
