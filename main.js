@@ -58,10 +58,19 @@ function initInterface() {
                     paging: false,
                     info: false,
                     search: false,
-                    columnDefs: [
-                        { orderable: false, targets: 0 }
-                    ],
-                    order: [[1, 'asc']]
+                    columns: [
+                        {orderable: false},
+                        {orderable: false},
+                        {orderable: false},
+                        {orderable: false},
+                        {orderable: false},
+                        {orderable: false},
+                        {orderable: false},
+                        {orderable: false},
+                        {orderable: false},
+                        {orderable: false},
+                        {orderable: false}
+                    ]
                 });
             });
         });
