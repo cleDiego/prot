@@ -53,11 +53,30 @@ function initInterface() {
                 $( deferred.resolve );
             })
         ).done(function () {
-            $('body').load('https://clediego.github.io/prot/main.html?v='+Date.now(), function () {
+            $('body').load('https://clediego.github.io/prot/main.html?v=' + Date.now(), function () {
+
+                for (let i = 0; i < protList.length; i++) {
+                    $('.prot-list-table tbody').appendChild(
+                        '<tr>'+
+                        '    <td><span class="list-prot-marker"></span></td>'+
+                        '    <td></td>'+
+                        '    <td>'+protList[i].cliente+'</td>'+
+                        '    <td>'+protList[i].numero+'</td>'+
+                        '    <td>'+protList[i].data_entrada+'</td>'+
+                        '    <td>'+protList[i].tipo+'</td>'+
+                        '    <td>'+protList[i].motivo+'</td>'+
+                        '    <td>'+protList[i].solicitacao+'</td>'+
+                        '    <td>'+protList[i].prioridade+'</tr>'+
+                        '    <td>'+protList[i].dt_entrega+'</td>'+
+                        '    <td>'+protList[i].localizacao+'</td>'+
+                        '</tr>'
+                    );
+                }
+
                 $('.prot-list-table').DataTable({
                     paging: false,
                     info: false,
-                    search: false,
+                    searching: false,
                     columns: [
                         {orderable: true},
                         {orderable: false},
