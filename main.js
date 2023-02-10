@@ -37,28 +37,24 @@ function initInterface() {
         include('title', 'head', 'Caixa de Trabalho');
 
         //carregar a nova interface
-        $('body').load('https://clediego.github.io/prot/main.html?v='+Date.now(), function () {
-            $.when(
-                $.getScript('https://code.jquery.com/jquery-3.6.3.min.js'),
-                $.getScript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'),
-                $.getScript('https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js'),
-                $.getScript('https://code.jquery.com/ui/1.13.2/jquery-ui.min.js'),
-                $.getScript('https://clediego.github.io/prot/main.css?v=' + Date.now()),
-                $.Deferred(function( deferred ){
-                    $( deferred.resolve );
-                })
-            ).done(function(){
+
+        $.when(
+            $.getScript('https://code.jquery.com/jquery-3.6.3.min.js'),
+            $.getScript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'),
+            $.getScript('https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js'),
+            $.getScript('https://code.jquery.com/ui/1.13.2/jquery-ui.min.js'),
+            $.getScript('https://clediego.github.io/prot/main.css'),
+            $.Deferred(function( deferred ){
+                $( deferred.resolve );
+            })
+        ).done(function () {
+            $('body').load('https://clediego.github.io/prot/main.html?v='+Date.now(), function () {
                 $('.prot-list').DataTable({
                     paging: false,
                     info: false,
                     search: false
                 });
             });
-
-
         });
-
-
-
     });
 }
