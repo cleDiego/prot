@@ -13,19 +13,28 @@ function initInterface() {
     $(document).ready(function () {
         //listar os protocolos
         var protList = [];
-        $('table > tbody  > tr').each(function(i, tr) {
+        var marker = null;
+        var marker_color = null;
+        $('table > tbody  > tr').each(function (i, tr) {
+            if ($(tr).find('th[colspan="12"]').length) {
+                marker = $(tr).find('th').text();
+                marker_color = $(tr).find('th').css('color');
+                marker_bg_color = $(tr).find('th').css('background-color');
+            }
             if ($(tr).find('td input[name="prot[]"]').length) {
-
                 protList.push({
                     'numero': $(tr).find('td').eq(2).find('a').text().replace(/[^0-9]/g, ''),
-                    'cliente': $(tr).find('td').eq(3).text().trim() ? $(tr).find('td').eq(3).text().trim() : 'a',
-                    'prioridade': $(tr).find('td').eq(4).text().trim() ? $(tr).find('td').eq(4).text().trim() : 'a',
+                    'cliente': $(tr).find('td').eq(3).text().trim(),
+                    'prioridade': $(tr).find('td').eq(4).text().trim(),
                     'tipo': $(tr).find('td').eq(5).text().trim(),
                     'motivo': $(tr).find('td').eq(6).text().trim(),
                     'solicitacao': $(tr).find('td').eq(7).text().trim(),
                     'dt_entrada': $(tr).find('td').eq(10).text().trim(),
-                    'dt_entrega': $(tr).find('td').eq(8).text().trim() ? $(tr).find('td').eq(8).text().trim() : 'a',
-                    'localizacao': $(tr).find('td').eq(9).text().trim()
+                    'dt_entrega': $(tr).find('td').eq(8).text().trim(),
+                    'localizacao': $(tr).find('td').eq(9).text().trim(),
+                    'marker': marker,
+                    'marker_color': marker_color,
+                    'marker_bg_color': marker_bg_color
                 });
             }
         });
@@ -62,9 +71,10 @@ function initInterface() {
             $('body').load('https://clediego.github.io/prot/main.html?v=' + Date.now(), function () {
                 console.log(protList);
                 for (let i = 0; i < protList.length; i++) {
+                    let marker_style = protList[i].marker ? 'style="color:' + protList[i].marker_color + '; background-color:' + protList[i].marker_bg_color + '"' : null;
                     $('.prot-list-table tbody').append(
                         '<tr>'+
-                        '    <td><span class="list-prot-marker"></span></td>'+
+                        '    <td><span '+marker_style+' class="list-prot-marker">'+protList[i].marker+'</span></td>'+
                         '    <td></td>'+
                         '    <td>'+protList[i].cliente+'</td>'+
                         '    <td>'+protList[i].numero+'</td>'+
