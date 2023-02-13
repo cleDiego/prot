@@ -54,6 +54,8 @@ function initInterface() {
         include('link', 'head', null, { href: 'https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css', rel: 'stylesheet' });
         include('link', 'head', null, { href: 'https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css', rel: 'stylesheet' });
         include('link', 'head', null, { href: 'https://clediego.github.io/prot/main.css?v=' + Date.now(), rel: 'stylesheet' });
+        include('link', 'head', null, { href: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css', rel: 'stylesheet' });
+
 
         //carregar a nova interface
 
