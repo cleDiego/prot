@@ -48,7 +48,7 @@ function initInterface() {
 
         include('meta', 'head', null, { name: 'viewport', content: 'width=device-width, initial-scale=1' });
         include('meta', 'head', null, { charset: 'utf-8' });
-        include('title', 'head', 'Caixa de Trabalho');
+        include('title', 'head', 'Nova Caixa de Trabalho');
 
         include('link', 'head', null, { href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css', rel: 'stylesheet' });
         include('link', 'head', null, { href: 'https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css', rel: 'stylesheet' });
