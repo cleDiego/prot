@@ -5,6 +5,10 @@ html, body {
     font-size: 10px;
 }
 
+main {
+    overflow: hidden;
+}
+
 header {
     position: fixed;
     top: 0;
