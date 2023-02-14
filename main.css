@@ -12,12 +12,14 @@ main {
 header {
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
+    width: 200px;
     height: 60px;
     background-color: transparent;
 }
 
 .content {
+    margin-top: 60px;
     min-height: calc(100vh - 100px);
 }
 
