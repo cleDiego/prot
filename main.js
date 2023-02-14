@@ -65,7 +65,7 @@ function initInterface() {
             $.getScript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'),
             $.getScript('https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js'),
             $.getScript('https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js'),
-            $.getScript('https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js'),
+            $.getScript('https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-pt_BR.min.js'),
             $.Deferred(function( deferred ){
                 $( deferred.resolve );
             })
@@ -109,6 +109,10 @@ function initInterface() {
                         {orderable: true}
                     ]
                 });
+
+
+
+
             });
         });
     });
