@@ -25,7 +25,7 @@ main {
     border: 1px solid #dee2e6;
 }
 
-.prot-table table tr td.wrap-solicitacao {
+.prot-table table tr td .wrap-solicitacao {
     line-height: 1.5em;
     height: 3em;
     overflow: hidden;
