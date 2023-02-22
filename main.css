@@ -47,6 +47,12 @@ main {
     border: 1px solid #dee2e6;
 }
 
+tbody, td, tfoot, th, thead, tr {
+    border-color: #dee2e6;
+    border-style: solid;
+    border-width: 0;
+}
+
 .prot-table table th {
     white-space: nowrap;
     background-color: #aac6e1;
