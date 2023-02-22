@@ -1,8 +1,11 @@
 @import url('fonts.css');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
 * {
-    font: 400 12px/13px Google Sans Text, monospace;
+    /*font: 400 12px/13px Google Sans Text, monospace;*/
+    font-family: "Poppins", sans-serif;
     letter-spacing: normal;
+    font-size: 1.6rem;
 }
 
 main {
