@@ -1,7 +1,7 @@
 @import url('fonts.css');
 
 * {
-    font-family: 'Google Sans Text';
+    font: 400 16px/24px Google Sans Text,Arial,Helvetica,sans-serif;
     letter-spacing: normal;
 }
 
