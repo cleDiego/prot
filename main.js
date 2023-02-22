@@ -91,6 +91,7 @@ function initInterface() {
                         paging: false,
                         info: false,
                         searching: false,
+                        fixedHeader: true,
                         columns: [
                             {orderable: true},
                             {orderable: false},
