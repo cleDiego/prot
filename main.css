@@ -49,6 +49,8 @@ main {
 
 .prot-table table th {
     white-space: nowrap;
+    background-color: #aac6e1;
+    color: #001c37;
 }
 
 .prot-table table tr td .wrap-solicitacao {
