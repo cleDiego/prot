@@ -86,7 +86,7 @@ function initInterface() {
                     );
                 }
 
-                $.when(
+                promise.done(
                     $.getScript('//cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js'),
                     $.getScript('//cdn.datatables.net/fixedheader/3.3.1/js/dataTables.fixedHeader.min.js')
                 ).done(function () {
@@ -94,7 +94,10 @@ function initInterface() {
                         paging: false,
                         info: false,
                         searching: false,
-                        fixedHeader: true,
+                        fixedHeader: {
+                            header: true,
+                            footer: true
+                        },
                         columns: [
                             {orderable: true},
                             {orderable: false},
