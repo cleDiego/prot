@@ -9,7 +9,15 @@ main {
     overflow: hidden;
 }
 
-.content {
-    margin-top: 60px;
-    min-height: calc(100vh - 60px);
+.contant-prot {
+    padding: 10px;
+}
+
+.prot-list {
+    border-radius: 8px;
+    height: calc(100vh - 20px);
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 22px -14px rgb(0 0 0 / 50%);
+    border: 1px solid #f2f2f2;
 }
