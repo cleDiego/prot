@@ -1,7 +1,16 @@
 @import url('fonts.css');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
+* {
+    /*font: 400 12px/13px Google Sans Text, monospace;*/
+    font-family: "Poppins", sans-serif;
+    letter-spacing: normal;
+    font-size: 12px;
+}
 
+/****
+    scrollbar
+****/
 ::-webkit-scrollbar {
   width: 10px;
   height: 6px;
@@ -21,13 +30,6 @@
   border-radius: 7px;
 }
 
-* {
-    /*font: 400 12px/13px Google Sans Text, monospace;*/
-    font-family: "Poppins", sans-serif;
-    letter-spacing: normal;
-    font-size: 12px;
-}
-
 main {
     overflow: hidden;
 }
@@ -38,7 +40,7 @@ main {
 
 .prot-table {
     border-radius: 8px;
-    height: calc(100vh - 20px);
+    max-height: calc(100vh - 20px);
     width: 100%;
     margin: 0 auto;
     box-shadow: 0px 0px 22px -14px rgb(0 0 0 / 50%);
