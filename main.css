@@ -1,11 +1,12 @@
 @import url('fonts.css');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-* {
+html, body, * {
     /*font: 400 12px/13px Google Sans Text, monospace;*/
     font-family: "Poppins", sans-serif;
     letter-spacing: normal;
     font-size: 12px;
+    color: #002a54;
 }
 
 /****
@@ -55,8 +56,9 @@ tbody, td, tfoot, th, thead, tr {
 
 .prot-table table th {
     white-space: nowrap;
-    background-color: #aac6e1;
-    color: #001c37;
+    background-color: #0054a6;
+    color: #fff;
+    vertical-align: middle;
 }
 
 .prot-table table tr td .wrap-solicitacao {
