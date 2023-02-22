@@ -64,10 +64,7 @@ function initInterface() {
             $.getScript('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'),
             $.getScript('https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js'),
             $.getScript('https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js'),
-            $.getScript('https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/js/bootstrap-select.js'),
-            $.Deferred(function( deferred ){
-                $( deferred.resolve );
-            })
+            $.getScript('https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/js/bootstrap-select.js')
         ).done(function () {
             $('body').load('https://clediego.github.io/prot/main.html?v=' + Date.now(), function () {
                 console.log(protList);
@@ -108,9 +105,6 @@ function initInterface() {
                         {orderable: true}
                     ]
                 });
-
-
-                $('.selectpicker').selectpicker();
 
             });
         });
