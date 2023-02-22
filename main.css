@@ -25,11 +25,12 @@ main {
     border: 1px solid #dee2e6;
 }
 
+.prot-table table th {
+    white-space: nowrap;
+}
+
 .prot-table table tr td .wrap-solicitacao {
-    line-height: 1.5em;
     height: 3em;
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    width: 100%;
+    min-width: 200px;
 }
