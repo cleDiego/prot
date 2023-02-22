@@ -58,7 +58,6 @@ function initInterface() {
 
 
         //carregar a nova interface
-
         $.when(
             $.getScript('https://code.jquery.com/jquery-3.6.3.min.js'),
             $.getScript('https://code.jquery.com/ui/1.13.2/jquery-ui.min.js'),
