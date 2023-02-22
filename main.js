@@ -63,7 +63,8 @@ function initInterface() {
         $.when(
             $.getScript('//code.jquery.com/jquery-3.6.3.min.js'),
             $.getScript('//code.jquery.com/ui/1.13.2/jquery-ui.min.js'),
-            $.getScript('//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js')
+            $.getScript('//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js'),
+            $.getScript('//cdn.datatables.net/fixedheader/3.3.1/js/dataTables.fixedHeader.min.js')
         ).done(function () {
             $('body').load('https://clediego.github.io/prot/main.html?v=' + Date.now(), function () {
                 console.log(protList);
