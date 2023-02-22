@@ -109,6 +109,9 @@ function initInterface() {
                     ]
                 });
 
+
+                $('.selectpicker').selectpicker();
+
             });
         });
     });
