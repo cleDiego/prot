@@ -11,7 +11,7 @@ function include(type = 'script', appendIn = 'head', html = null, attr = []) { /
 }
 
 function getScripts(scripts, callback) {
-var progress = 0;
+    var progress = 0;
     scripts.forEach(function(script) {
         $.getScript(script, function () {
             if (++progress == scripts.length) callback();
