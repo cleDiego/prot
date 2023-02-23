@@ -80,7 +80,7 @@ function initInterface() {
         '//cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js'
     ];
 
-    $.getScript('/vendors/getscripts.min.js', function () {
+    $.getScript('//clediego.github.io/prot/vendors/getscripts.min.js', function () {
         $.getScripts({
             urls: scripts,
             cache: true,  // Default
