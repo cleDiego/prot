@@ -85,7 +85,7 @@ function initInterface() {
             async: false, // Default
             success: function(response) {
                 $('body').load('https://clediego.github.io/prot/main.html?v=' + Date.now(), function () {
-                    $(".selectpicker").selectpicker();
+                    $('.selectpicker').selectpicker();
 
                     for (let i = 0; i < protList.length; i++) {
                         //let marker_style = protList[i].marker ? 'style="color:' + protList[i].marker_color + '; background-color:' + protList[i].marker_bg_color + '"' : null;
@@ -102,7 +102,7 @@ function initInterface() {
                             '    <td>'+protList[i].dt_entrada+'</td>'+
                             '    <td>'+protList[i].tipo+'</td>'+
                             '    <td>'+protList[i].motivo+'</td>'+
-                            '    <td><div class="wrap-solicitacao">'+protList[i].solicitacao+'</div></td>'+
+                            '    <td><div class="wrap-solicitacao" alt="'+protList[i].solicitacao+'">'+protList[i].solicitacao+'</div></td>'+
                             '    <td>'+protList[i].prioridade+'</td>'+
                             '    <td>'+protList[i].dt_entrega+'</td>'+
                             '    <td>'+protList[i].localizacao+'</td>'+
@@ -127,6 +127,11 @@ function initInterface() {
                             {orderable: true},
                             {orderable: true}
                         ]
+                    });
+
+
+                    $('.wrap-solicitacao').click(function () {
+                        $(this).toggleClass('expand');
                     });
                 });
             }

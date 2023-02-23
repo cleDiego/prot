@@ -70,6 +70,11 @@ tbody, td, tfoot, th, thead, tr {
     height: 3em;
     overflow: hidden;
     min-width: 200px;
+    cursor: pointer;
+}
+
+.prot-table table tr td .wrap-solicitacao.expand {
+    height: auto;
 }
 
 .prot-table table tr td i.bi {
