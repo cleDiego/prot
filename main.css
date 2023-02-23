@@ -1,9 +1,11 @@
 @import url('fonts.css');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&display=swap");
+@import url("vendors/nav.css");
 
 html, body, * {
     /*font: 400 12px/13px Google Sans Text, monospace;*/
-    font-family: "Poppins", sans-serif;
+    font-family: "Public Sans", "Poppins", sans-serif;
     letter-spacing: normal;
     font-size: 12px;
 }
@@ -70,6 +72,7 @@ tbody, td, tfoot, th, thead, tr {
     overflow: hidden;
     min-width: 200px;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .prot-table table tr td .wrap-solicitacao.expand {
