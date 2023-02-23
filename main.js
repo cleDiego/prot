@@ -11,24 +11,30 @@ function include(type = 'script', appendIn = 'head', html = null, attr = []) { /
 }
 
 function initInterface() {
-    var script = document.createElement('script');
-    script.src = '//code.jquery.com/jquery-3.6.3.min.js';
-    script.onload = function () {
-        $.getMultiScripts = function(arr, path) {
-            var _arr = $.map(arr, function(scr) {
-                return $.getScript( (path||"") + scr );
-            });
-
-            _arr.push($.Deferred(function( deferred ){
-                $( deferred.resolve );
-            }));
-
-            return $.when.apply($, _arr);
-        }
-        $('head').empty();
-        $('body').empty();
+    var jq = document.createElement('script');
+    jq.type = "text/javascript";
+    jq.src = '//code.jquery.com/jquery-3.6.3.min.js';
+    jq.onload = function () {
+        init();
     };
+    document.getElementsByTagName("head")[0].appendChild(jq);
+}
 
+function init() {
+    $.getMultiScripts = function(arr, path) {
+        var _arr = $.map(arr, function(scr) {
+            return $.getScript( (path||"") + scr );
+        });
+
+        _arr.push($.Deferred(function( deferred ){
+            $( deferred.resolve );
+        }));
+
+        return $.when.apply($, _arr);
+    }
+    $('head').empty();
+    $('body').empty();
+}
 
 
     /*
@@ -146,4 +152,3 @@ function initInterface() {
         });
     });
     */
-}
