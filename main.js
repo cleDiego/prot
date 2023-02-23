@@ -96,7 +96,7 @@ function initInterface() {
                             '<tr>'+
                             '    <td></td>'+
                             //'    <td><span '+marker_style+' class="list-prot-marker">'+protList[i].marker+'</span></td>'+
-                            '    <td align="center">'+marker+'</td>'+
+                            '    <td class="text-center">'+marker+'</td>'+
                             '    <td>'+protList[i].cliente+'</td>'+
                             '    <td>'+protList[i].numero+'</td>'+
                             '    <td>'+protList[i].dt_entrada+'</td>'+
