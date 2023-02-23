@@ -85,54 +85,54 @@ function init() {
         '//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js',
         '//cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js',
         '//cdn.datatables.net/fixedheader/3.3.1/js/dataTables.fixedHeader.min.js',
-        '//cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js',
-        '//clediego.github.io/prot/main.html?v=' + Date.now()
+        '//cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js'
     ];
 
     $.getMultiScripts(scripts, '').done(function () {
+        $('body').load('https://clediego.github.io/prot/main.html?v=' + Date.now(), function () {
+            $(".selectpicker").selectpicker();
 
-        $(".selectpicker").selectpicker();
+            for (let i = 0; i < protList.length; i++) {
+                let marker_style = protList[i].marker ? 'style="color:' + protList[i].marker_color + '; background-color:' + protList[i].marker_bg_color + '"' : null;
+                $('.prot-list-table tbody').append(
+                    '<tr>'+
+                    '    <td><span '+marker_style+' class="list-prot-marker">'+protList[i].marker+'</span></td>'+
+                    '    <td></td>'+
+                    '    <td>'+protList[i].cliente+'</td>'+
+                    '    <td>'+protList[i].numero+'</td>'+
+                    '    <td>'+protList[i].dt_entrada+'</td>'+
+                    '    <td>'+protList[i].tipo+'</td>'+
+                    '    <td>'+protList[i].motivo+'</td>'+
+                    '    <td><div class="wrap-solicitacao">'+protList[i].solicitacao+'</div></td>'+
+                    '    <td>'+protList[i].prioridade+'</td>'+
+                    '    <td>'+protList[i].dt_entrega+'</td>'+
+                    '    <td>'+protList[i].localizacao+'</td>'+
+                    '</tr>'
+                );
+            }
 
-        for (let i = 0; i < protList.length; i++) {
-            let marker_style = protList[i].marker ? 'style="color:' + protList[i].marker_color + '; background-color:' + protList[i].marker_bg_color + '"' : null;
-            $('.prot-list-table tbody').append(
-                '<tr>'+
-                '    <td><span '+marker_style+' class="list-prot-marker">'+protList[i].marker+'</span></td>'+
-                '    <td></td>'+
-                '    <td>'+protList[i].cliente+'</td>'+
-                '    <td>'+protList[i].numero+'</td>'+
-                '    <td>'+protList[i].dt_entrada+'</td>'+
-                '    <td>'+protList[i].tipo+'</td>'+
-                '    <td>'+protList[i].motivo+'</td>'+
-                '    <td><div class="wrap-solicitacao">'+protList[i].solicitacao+'</div></td>'+
-                '    <td>'+protList[i].prioridade+'</td>'+
-                '    <td>'+protList[i].dt_entrega+'</td>'+
-                '    <td>'+protList[i].localizacao+'</td>'+
-                '</tr>'
-            );
-        }
-
-        $('.prot-list-table').DataTable({
-            paging: false,
-            info: false,
-            searching: false,
-            fixedHeader: {
-                header: true,
-                footer: true
-            },
-            columns: [
-                {orderable: true},
-                {orderable: false},
-                {orderable: true},
-                {orderable: true},
-                {orderable: true},
-                {orderable: true},
-                {orderable: true},
-                {orderable: false},
-                {orderable: true},
-                {orderable: true},
-                {orderable: true}
-            ]
+            $('.prot-list-table').DataTable({
+                paging: false,
+                info: false,
+                searching: false,
+                fixedHeader: {
+                    header: true,
+                    footer: true
+                },
+                columns: [
+                    {orderable: true},
+                    {orderable: false},
+                    {orderable: true},
+                    {orderable: true},
+                    {orderable: true},
+                    {orderable: true},
+                    {orderable: true},
+                    {orderable: false},
+                    {orderable: true},
+                    {orderable: true},
+                    {orderable: true}
+                ]
+            });
         });
 
     });
