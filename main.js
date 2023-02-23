@@ -81,6 +81,7 @@ function init() {
     include('link', 'head', null, { href: 'https://clediego.github.io/prot/main.css?v=' + Date.now(), rel: 'stylesheet' });
 
     var scripts = [
+        '//code.jquery.com/jquery-3.6.3.min.js',
         '//code.jquery.com/ui/1.13.2/jquery-ui.min.js',
         '//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js',
         '//cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js',
