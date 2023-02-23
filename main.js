@@ -93,16 +93,16 @@ function initInterface() {
                             '<i title="'+protList[i].marker+'" style="color:' + protList[i].marker_bg_color + ';" class="bi bi-circle-fill"></i><br/>'+protList[i].marker
                             : '';
                         $('.prot-list-table tbody').append(
-                            '<tr>'+
+                            '<tr class="text-center">'+
                             '    <td></td>'+
                             //'    <td><span '+marker_style+' class="list-prot-marker">'+protList[i].marker+'</span></td>'+
-                            '    <td class="text-center">'+marker+'</td>'+
+                            '    <td>'+marker+'</td>'+
                             '    <td>'+protList[i].cliente+'</td>'+
                             '    <td>'+protList[i].numero+'</td>'+
                             '    <td>'+protList[i].dt_entrada+'</td>'+
                             '    <td>'+protList[i].tipo+'</td>'+
                             '    <td>'+protList[i].motivo+'</td>'+
-                            '    <td><div class="wrap-solicitacao" alt="'+protList[i].solicitacao+'">'+protList[i].solicitacao+'</div></td>'+
+                            '    <td class="text-start"><div class="wrap-solicitacao" alt="'+protList[i].solicitacao+'">'+protList[i].solicitacao+'</div></td>'+
                             '    <td>'+protList[i].prioridade+'</td>'+
                             '    <td>'+protList[i].dt_entrega+'</td>'+
                             '    <td>'+protList[i].localizacao+'</td>'+
