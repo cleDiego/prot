@@ -62,6 +62,15 @@ function init() {
         return $.when.apply($, _arr);
     }
 
+    function getScripts(scripts, callback) {
+    var progress = 0;
+        scripts.forEach(function(script) {
+            $.getScript(script, function () {
+                if (++progress == scripts.length) callback();
+            });
+        });
+    }
+
     var protList = getProtList();
     console.log(protList);
 
@@ -89,7 +98,7 @@ function init() {
         '//cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js'
     ];
 
-    $.getMultiScripts(scripts, '').done(function () {
+    getScripts(scripts, function () {
         $('body').load('https://clediego.github.io/prot/main.html?v=' + Date.now(), function () {
             $(".selectpicker").selectpicker();
 
