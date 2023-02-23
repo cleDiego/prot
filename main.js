@@ -69,6 +69,8 @@ function initInterface() {
     include('link', 'head', null, { href: 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css', rel: 'stylesheet' });
     include('link', 'head', null, { href: 'https://clediego.github.io/prot/main.css?v=' + Date.now(), rel: 'stylesheet' });
 
+
+
     var scripts = [
         '//code.jquery.com/jquery-3.6.3.min.js',
         '//code.jquery.com/ui/1.13.2/jquery-ui.min.js',
@@ -78,49 +80,58 @@ function initInterface() {
         '//cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js'
     ];
 
-    getScripts(scripts, function () {
-        $('body').load('https://clediego.github.io/prot/main.html?v=' + Date.now(), function () {
-            $(".selectpicker").selectpicker();
+    $.getScript('/vendors/getscripts.min.js', function () {
+        $.getScripts({
+            urls: scripts,
+            cache: true,  // Default
+            async: false, // Default
+            success: function(response) {
+                $('body').load('https://clediego.github.io/prot/main.html?v=' + Date.now(), function () {
+                    $(".selectpicker").selectpicker();
 
-            for (let i = 0; i < protList.length; i++) {
-                let marker_style = protList[i].marker ? 'style="color:' + protList[i].marker_color + '; background-color:' + protList[i].marker_bg_color + '"' : null;
-                $('.prot-list-table tbody').append(
-                    '<tr>'+
-                    '    <td><span '+marker_style+' class="list-prot-marker">'+protList[i].marker+'</span></td>'+
-                    '    <td></td>'+
-                    '    <td>'+protList[i].cliente+'</td>'+
-                    '    <td>'+protList[i].numero+'</td>'+
-                    '    <td>'+protList[i].dt_entrada+'</td>'+
-                    '    <td>'+protList[i].tipo+'</td>'+
-                    '    <td>'+protList[i].motivo+'</td>'+
-                    '    <td><div class="wrap-solicitacao">'+protList[i].solicitacao+'</div></td>'+
-                    '    <td>'+protList[i].prioridade+'</td>'+
-                    '    <td>'+protList[i].dt_entrega+'</td>'+
-                    '    <td>'+protList[i].localizacao+'</td>'+
-                    '</tr>'
-                );
+                    for (let i = 0; i < protList.length; i++) {
+                        let marker_style = protList[i].marker ? 'style="color:' + protList[i].marker_color + '; background-color:' + protList[i].marker_bg_color + '"' : null;
+                        $('.prot-list-table tbody').append(
+                            '<tr>'+
+                            '    <td><span '+marker_style+' class="list-prot-marker">'+protList[i].marker+'</span></td>'+
+                            '    <td></td>'+
+                            '    <td>'+protList[i].cliente+'</td>'+
+                            '    <td>'+protList[i].numero+'</td>'+
+                            '    <td>'+protList[i].dt_entrada+'</td>'+
+                            '    <td>'+protList[i].tipo+'</td>'+
+                            '    <td>'+protList[i].motivo+'</td>'+
+                            '    <td><div class="wrap-solicitacao">'+protList[i].solicitacao+'</div></td>'+
+                            '    <td>'+protList[i].prioridade+'</td>'+
+                            '    <td>'+protList[i].dt_entrega+'</td>'+
+                            '    <td>'+protList[i].localizacao+'</td>'+
+                            '</tr>'
+                        );
+                    }
+
+                    $('.prot-list-table').DataTable({
+                        paging: false,
+                        info: false,
+                        searching: false,
+                        fixedHeader: true,
+                        columns: [
+                            {orderable: true},
+                            {orderable: false},
+                            {orderable: true},
+                            {orderable: true},
+                            {orderable: true},
+                            {orderable: true},
+                            {orderable: true},
+                            {orderable: false},
+                            {orderable: true},
+                            {orderable: true},
+                            {orderable: true}
+                        ]
+                    });
+                });
             }
-
-            $('.prot-list-table').DataTable({
-                paging: false,
-                info: false,
-                searching: false,
-                fixedHeader: true,
-                columns: [
-                    {orderable: true},
-                    {orderable: false},
-                    {orderable: true},
-                    {orderable: true},
-                    {orderable: true},
-                    {orderable: true},
-                    {orderable: true},
-                    {orderable: false},
-                    {orderable: true},
-                    {orderable: true},
-                    {orderable: true}
-                ]
-            });
         });
+
+
 
     });
 
