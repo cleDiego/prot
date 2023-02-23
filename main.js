@@ -10,14 +10,13 @@ function include(type = 'script', appendIn = 'head', html = null, attr = []) { /
     document.getElementsByTagName(appendIn).item(0).appendChild(elem);
 }
 
-function initInterface() {
-    var jq = document.createElement('script');
-    jq.type = "text/javascript";
-    jq.src = '//code.jquery.com/jquery-3.6.3.min.js';
-    jq.onload = function () {
-        init();
-    };
-    document.getElementsByTagName("head")[0].appendChild(jq);
+function getScripts(scripts, callback) {
+var progress = 0;
+    scripts.forEach(function(script) {
+        $.getScript(script, function () {
+            if (++progress == scripts.length) callback();
+        });
+    });
 }
 
 function getProtList() {
@@ -49,27 +48,7 @@ function getProtList() {
     return protList;
 }
 
-function init() {
-    $.getMultiScripts = function(arr, path) {
-        var _arr = $.map(arr, function(scr) {
-            return $.getScript( (path||"") + scr );
-        });
-
-        _arr.push($.Deferred(function( deferred ){
-            $( deferred.resolve );
-        }));
-
-        return $.when.apply($, _arr);
-    }
-
-    function getScripts(scripts, callback) {
-    var progress = 0;
-        scripts.forEach(function(script) {
-            $.getScript(script, function () {
-                if (++progress == scripts.length) callback();
-            });
-        });
-    }
+function initInterface() {
 
     var protList = getProtList();
     console.log(protList);
@@ -125,10 +104,7 @@ function init() {
                 paging: false,
                 info: false,
                 searching: false,
-                fixedHeader: {
-                    header: true,
-                    footer: true
-                },
+                fixedHeader: true,
                 columns: [
                     {orderable: true},
                     {orderable: false},
