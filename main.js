@@ -91,12 +91,12 @@ function initInterface() {
                         //let marker_style = protList[i].marker ? 'style="color:' + protList[i].marker_color + '; background-color:' + protList[i].marker_bg_color + '"' : null;
                         let marker = protList[i].marker ?
                             '<i title="'+protList[i].marker+'" style="color:' + protList[i].marker_bg_color + ';" class="bi bi-circle-fill"></i> '+protList[i].marker
-                            : null;
+                            : '';
                         $('.prot-list-table tbody').append(
                             '<tr>'+
                             '    <td></td>'+
                             //'    <td><span '+marker_style+' class="list-prot-marker">'+protList[i].marker+'</span></td>'+
-                            '    <td>'+marker+'</td>'+
+                            '    <td align="center">'+marker+'</td>'+
                             '    <td>'+protList[i].cliente+'</td>'+
                             '    <td>'+protList[i].numero+'</td>'+
                             '    <td>'+protList[i].dt_entrada+'</td>'+
