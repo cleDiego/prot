@@ -39,11 +39,11 @@ main {
 }
 
 .prot-table {
-    border-radius: 8px;
+    /*border-radius: 8px;*/
     max-height: calc(100vh - 10px);
     width: 100%;
     margin: 0 auto;
-    box-shadow: 0px 0px 22px -14px rgb(0 0 0 / 50%);
+    /*box-shadow: 0px 0px 22px -14px rgb(0 0 0 / 50%);*/
     border: 1px solid #dee2e6;
 }
 
@@ -52,13 +52,13 @@ tbody, td, tfoot, th, thead, tr {
     border-style: solid;
     border-width: 0;
     transition: 0.4s;
+    vertical-align: middle;
 }
 
 .prot-table table th {
     white-space: nowrap;
     background-color: #0054a6;
     color: #fff;
-    vertical-align: middle;
 }
 
 .table-hover > tbody > tr:hover > * {
@@ -70,4 +70,9 @@ tbody, td, tfoot, th, thead, tr {
     height: 3em;
     overflow: hidden;
     min-width: 200px;
+}
+
+.prot-table table tr td i.bi {
+    font-size: 16px;
+
 }
