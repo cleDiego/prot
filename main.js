@@ -25,7 +25,8 @@ function initInterface() {
 
             return $.when.apply($, _arr);
         }
-        $(document).empty();
+        $('head').empty();
+        $('body').empty();
     };
 
 
