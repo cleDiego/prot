@@ -51,7 +51,7 @@ tbody, td, tfoot, th, thead, tr {
     border-color: #dee2e6;
     border-style: solid;
     border-width: 0;
-    transition: 0.2s;
+    transition: 0.4s;
 }
 
 .prot-table table th {
@@ -62,9 +62,8 @@ tbody, td, tfoot, th, thead, tr {
 }
 
 .table-hover > tbody > tr:hover > * {
-    background-color: #A500A6;
-    color: #fff;
-    transition: 0.2s;
+    background-color: #bbf5d8;
+    transition: 0.4s;
 }
 
 .prot-table table tr td .wrap-solicitacao {
