@@ -1,15 +1,36 @@
 //pausar o refresh
 window.stop();
 
-function initInterface() {
-    function include(type = 'script', appendIn = 'head', html = null, attr = []) { //id = null, name = null, value = null, content = null) {
-        var elem;
-        elem = document.createElement(type);
-        for ([k, v] of Object.entries(attr)) elem.setAttribute(k, v);
-        elem.innerHTML = html;
-        document.getElementsByTagName(appendIn).item(0).appendChild(elem);
-    }
 
+function include(type = 'script', appendIn = 'head', html = null, attr = []) { //id = null, name = null, value = null, content = null) {
+    var elem;
+    elem = document.createElement(type);
+    for ([k, v] of Object.entries(attr)) elem.setAttribute(k, v);
+    elem.innerHTML = html;
+    document.getElementsByTagName(appendIn).item(0).appendChild(elem);
+}
+
+function initInterface() {
+    var script = document.createElement('script');
+    script.src = '//code.jquery.com/jquery-3.6.3.min.js';
+    script.onload = function () {
+        $.getMultiScripts = function(arr, path) {
+            var _arr = $.map(arr, function(scr) {
+                return $.getScript( (path||"") + scr );
+            });
+
+            _arr.push($.Deferred(function( deferred ){
+                $( deferred.resolve );
+            }));
+
+            return $.when.apply($, _arr);
+        }
+        $(document).empty();
+    };
+
+
+
+    /*
     $(document).ready(function () {
         //listar os protocolos
         var protList = [];
@@ -123,4 +144,5 @@ function initInterface() {
             });
         });
     });
+    */
 }
