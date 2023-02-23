@@ -62,7 +62,6 @@ function initInterface() {
 
 
     include('link', 'head', null, { href: 'https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css', rel: 'stylesheet' });
-    include('link', 'head', null, { href: 'https://cdn.datatables.net/fixedheader/3.3.1/css/fixedHeader.dataTables.min.css', rel: 'stylesheet' });
     include('link', 'head', null, { href: 'https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/css/bootstrap-select.min.css', rel: 'stylesheet' });
     include('link', 'head', null, { href: 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css', rel: 'stylesheet' });
 
@@ -76,7 +75,6 @@ function initInterface() {
         '//code.jquery.com/ui/1.13.2/jquery-ui.min.js',
         '//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js',
         '//cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js',
-        '//cdn.datatables.net/fixedheader/3.3.1/js/dataTables.fixedHeader.min.js',
         '//cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js'
     ];
 
@@ -112,7 +110,6 @@ function initInterface() {
                         paging: false,
                         info: false,
                         searching: false,
-                        fixedHeader: true,
                         columns: [
                             {orderable: true},
                             {orderable: false},
