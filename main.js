@@ -90,7 +90,7 @@ function initInterface() {
                     for (let i = 0; i < protList.length; i++) {
                         //let marker_style = protList[i].marker ? 'style="color:' + protList[i].marker_color + '; background-color:' + protList[i].marker_bg_color + '"' : null;
                         let marker = protList[i].marker ?
-                            '<i title="'+protList[i].marker+'" style="color:' + protList[i].marker_bg_color + ';" class="bi bi-circle-fill shadow"></i><br/>'+protList[i].marker
+                            '<i title="'+protList[i].marker+'" style="color:' + protList[i].marker_bg_color + ';" class="bi bi-circle-fill"></i><br/>'+protList[i].marker
                             : '';
                         $('.prot-list-table tbody').append(
                             '<tr>'+
