@@ -76,7 +76,8 @@ function initInterface() {
         '//cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js',
         '//cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js',
         '//cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta2/dist/js/bootstrap-select.min.js',
-        '//clediego.github.io/prot/vendors/feather.min.js'
+        '//clediego.github.io/prot/vendors/feather.min.js',
+        '//clediego.github.io/prot/vendors/perfectscrollbar.min.js'
     ];
 
     $.getScript('//clediego.github.io/prot/vendors/getscripts.min.js', function () {
