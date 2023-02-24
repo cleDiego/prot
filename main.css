@@ -9,9 +9,7 @@ html, body, * {
     font-size: 12px;
 }
 
-/****
-    scrollbar
-****/
+/* scrollbar */
 ::-webkit-scrollbar {
   width: 4px;
   height: 6px;
