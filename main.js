@@ -115,8 +115,8 @@ function initInterface() {
                         info: false,
                         searching: false,
                         columns: [
-                            {orderable: true},
                             {orderable: false},
+                            {orderable: true},
                             {orderable: true},
                             {orderable: true},
                             {orderable: true},
