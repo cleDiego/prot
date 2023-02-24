@@ -13,21 +13,21 @@ html, body, * {
     scrollbar
 ****/
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 4px;
   height: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(28, 62, 126, 0.5);
+  background: rgba(28, 62, 126, 0.3);
   border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #1c3e7e;
+  background: #0054a6;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 7px;
 }
 
@@ -66,7 +66,7 @@ tbody, td, tfoot, th, thead, tr {
 }
 
 .prot-table table tr td .wrap-solicitacao {
-    height: 3em;
+    height: 3.5em;
     overflow: hidden;
     min-width: 200px;
     cursor: pointer;
