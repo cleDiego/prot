@@ -18,16 +18,16 @@ html, body, * {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(28, 62, 126, 0.3);
+  background: rgba(0, 84, 166, 0.4);
   border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0054a6;
+  background: rgb(0, 84, 166);
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 7px;
 }
 
