@@ -68,6 +68,7 @@ tbody, td, tfoot, th, thead, tr {
 .prot-table table tr td .wrap-solicitacao {
     height: 3.5em;
     overflow: hidden;
+    overflow-y: scroll;
     min-width: 200px;
     cursor: pointer;
     background-color: transparent;
